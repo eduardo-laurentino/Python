@@ -1,0 +1,16 @@
+frase = 'Eduardo Laurentino da Silva'
+
+print(frase[3])
+print(frase[3:13])
+print(frase[:13])
+print(frase[13:])
+print(frase[:13:2])
+print(frase.upper().count('a'))
+print(len(frase))
+print(len(frase.strip()))
+print(frase.find('Laurentino'))
+print('Eduardo' in frase)
+print(frase.find('laurentino'))
+print(frase.lower().find('laurentino'))
+print(frase.count(' '))
+print("\033[1;32;41mOlá, Mundo!\033[m")
