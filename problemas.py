@@ -140,6 +140,56 @@ def divisao():
         resto = x
     print(f"{dividendo} / {divisor} = {quociente} resto {resto}")
 
+def verificadorParenteses():
+    expressao = input("Digite a sequência de parênteses a validar:")
+    x = 0
+    pilha = []
+    while x < len(expressao):
+        if expressao[x] == "(":
+            pilha.append("(")
+        if expressao[x] == ")":
+            if len(pilha) > 0:
+                pilha.pop(-1)
+            else:
+                pilha.append(")") # Força a mensagem de erro
+                break
+        x = x + 1
+    if len(pilha) == 0:
+        print("OK")
+    else:
+        print("Erro")
+
+def deposito():
+    deposito = float(input("Depósito inicial: "))
+    taxa = float(input("Taxa de juros (Ex.: 3 para 3%): "))
+    mes = 1
+    saldo = deposito
+    while mes <= 24:
+        saldo = saldo + (saldo * (taxa / 100))
+        print(f"Saldo do mês {mes} é de R${saldo:.2f}.")
+        mes = mes + 1
+    print(f"O ganho obtido com os juros foi de R${saldo - deposito:.2f}")
+
+def nomeFormatado(nome, sobrenome):
+    nome_completo = nome + " " + sobrenome
+    return nome_completo.title()
+
+def tabuada():
+    n = int(input("Tabuada de:"))
+    x = 1
+    while x <= 10:
+        print(f"{n} x {x} = {n * x}")
+        x = x + 1
+    print("\n\n")
+
+    n = int(input("Tabuada de: "))
+    inicio = int(input("De: "))
+    fim = int(input("Até: "))
+    x = inicio
+    while x <= fim:
+        print(f"{n} x {x} = {n * x}")
+        x = x + 1
+
 #aluguelCarro()
 #consumoEnergia()
 #converterTemperatura()
@@ -151,4 +201,8 @@ def divisao():
 #menorNaLista()
 #listaDecrescente()
 #emprestimo()
-divisao()
+#divisao()
+#verificadorParenteses()
+#deposito()
+#print(nomeFormatado("eduardo", "laurentino"))
+tabuada()
