@@ -174,6 +174,22 @@ def nomeFormatado(nome, sobrenome):
     nome_completo = nome + " " + sobrenome
     return nome_completo.title()
 
+def temperaturaMaxMin():
+    temperaturas = [-10, -8, 0, 1, 2, 5, -2, -4]
+    #A escolha do primeiro elemento é arbitrária, poderia ser qualquer elemento válido
+    minima = temperaturas[0] 
+    maxima = temperaturas[0]
+    soma = 0
+    for i in temperaturas:
+        if i < minima:
+            minima = i
+        if i > maxima:
+            maxima = i
+        soma = soma + i
+    print(f"Temperatura máxima: {maxima} °C")
+    print(f"Temperatura mínima: {minima} °C")
+    print(f"Temperatura média: {soma / len(temperaturas)} °C")
+
 def tabuada():
     n = int(input("Tabuada de:"))
     x = 1
@@ -205,4 +221,5 @@ def tabuada():
 #verificadorParenteses()
 #deposito()
 #print(nomeFormatado("eduardo", "laurentino"))
-tabuada()
+#tabuada()
+temperaturaMaxMin()
