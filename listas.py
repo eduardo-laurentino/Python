@@ -21,7 +21,7 @@ print(turismo)
 tamanho = len(turismo)
 print(tamanho)
 
-nomes = ['Eduardo', 'Maíra']
+nomes = ['Eduardo', 'Maria']
 for nome in nomes:
     print("Olá, "+nome.title())
 
