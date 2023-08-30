@@ -1,16 +1,16 @@
-L = [15, 7, 27, 39]
+l = [15, 7, 27, 39]
 p = int(input("Digite o valor a procurar (p): "))
 s = int(input("Digite o outro valor a procurar (v): "))
 x = 0
 achouP = False
 achouV = False
 primeiro = 0
-while x < len(L):
-    if L[x] == p:
+while x < len(l):
+    if l[x] == p:
         achouP = True
         if not achouV:
             primeiro = 1
-    if L[x] == s:
+    if l[x] == s:
         achouV = True
         if not achouP:
             primeiro = 2
