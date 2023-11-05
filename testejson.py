@@ -1,7 +1,7 @@
 import json 
 #Testes Simples
 #numeros = [2, 3, 5, 7, 11, 13]
-filename = 'numeros.jason'
+filename = 'numeros.json'
 #with open(filename, 'w') as file_object:
     #json.dump(numeros, file_object)
     

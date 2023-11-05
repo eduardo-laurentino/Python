@@ -4,6 +4,7 @@ agenda_backup = []
 dicinario_principal = {}
 agenda = []
 
+
 def cadastrar():
     cpf = int(input("Digite seu CPF: "))
     nome = str(input("Digite seu Nome: ")).title()
@@ -11,10 +12,10 @@ def cadastrar():
     telefone = int(input("Informe seu Telefone: "))
 
     dicionario_principal = {
-        'cpf' : cpf,
-        'nome' : nome,
-        'idade' : idade,
-        'telefone' : telefone
+        'cpf': cpf,
+        'nome': nome,
+        'idade': idade,
+        'telefone': telefone
     }
 
     agenda.append(dicionario_principal)
@@ -25,6 +26,7 @@ def cadastrar():
     else:
         print("\n")
         cadastrar()
+
 
 def mostra_cadastros():
     print("===== AGENDA PRINCIPAL =====")
@@ -45,7 +47,7 @@ def cad_menor_idade():
 
 
 def menu():
-    menu =True
+    menu = True
     while menu:
         print("""
         1- Cadastrar Uma Pessoa
@@ -63,5 +65,6 @@ def menu():
                 mostra_cadastros()
             elif op == 4:
                 cad_menor_idade()
+
 
 menu()
