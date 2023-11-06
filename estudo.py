@@ -11,6 +11,7 @@ import emoji
 import serial
 import requests
 from datetime import datetime
+import pywhatkit
 
 
 def calculaValorCompra():
@@ -405,6 +406,41 @@ def cotacaoMoedas():
 
     print(f"Cotação Atualizada. {datetime.now()}\nDólar: R${cotacao_dolar}\nEuro: R${cotacao_euro}\nBTC: R${cotacao_btc}")
 
+def enviaZap():
+    pywhatkit.sendwhatmsg_instantly('+55 número', 'Olá')
+
+
+def PesquisaSequencial():
+    # Exemplo de uso:
+    lista = [3, 7, 1, 9, 4, 6, 8]
+    alvo = 4
+    for i in range(len(lista)):
+        if lista[i] == alvo:
+            print(f'O elemento {alvo} foi encontrado no índice {i}.')
+            exit()
+    print(f'O elemento {alvo} não foi encontrado na lista.')
+
+def pesquisaBinaria():
+    lista = [1, 3, 4, 6, 7, 8, 9]
+    alvo = 4
+    esquerda = 0
+    direita = len(lista) - 1
+    print("Direita = ", direita)
+
+    while esquerda <= direita:
+        meio = (esquerda + direita) // 2  # Calcula o índice do meio
+
+        if lista[meio] == alvo:
+            print(f'O elemento {alvo} foi encontrado no índice {meio}.')
+            return meio  # Retorna o índice onde o elemento foi encontrado
+        elif lista[meio] < alvo:
+            esquerda = meio + 1  # O alvo está na metade direita
+        else:
+            direita = meio - 1  # O alvo está na metade esquerda
+
+    print(f'O elemento {alvo} não foi encontrado na lista.')
+
+
 #calculaValorCompra()
 #funcaoSleep()
 #sorteio()
@@ -424,4 +460,7 @@ def cotacaoMoedas():
 #ArduinoPython()
 #contPalavras()
 #estoque()
-cotacaoMoedas()
+#cotacaoMoedas()
+#enviaZap()
+#PesquisaSequencial()
+pesquisaBinaria()
