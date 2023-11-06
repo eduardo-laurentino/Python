@@ -1,5 +1,4 @@
-# Traalhando com dicionários
-from optparse import Values
+# Trabalhando com dicionários
 
 
 pessoa = {
@@ -115,9 +114,9 @@ print("\n")
 
 # Listas dentro de dicionários
 linguagens_favoritas = {
-    'Marcos' : ['php', 'flutter', 'c'],
-    'Matheus' : ['arduino', 'c', 'python' ],
-    'Eduardo' : ['c', 'arduino', 'python'],
+    'Marcos' : ['php', 'dart', 'c'],
+    'Matheus' : ['java', 'c', 'python' ],
+    'Eduardo' : ['c', 'rust', 'python'],
     'Maria' : ['html', 'css', 'javascript']
 }
 for nome, valor in linguagens_favoritas.items():
@@ -231,3 +230,24 @@ cidades = {
 for city, dados in cidades.items():
     informacao = dados['pais']+ " " + dados['estado']+ " " + dados['população']
     print(city, informacao)
+
+# Dicionário de objetos
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    def cumprimentar(self):
+        return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos."
+    
+pessoa1 = Pessoa("Eduardo", 23)
+pessoa2 = Pessoa("Bob", 25)
+pessoa3 = Pessoa("Carol", 35)
+
+dictPessoas = {
+    'pessoa1':pessoa1,
+    'pessoa2':pessoa2,
+    'pessoa3':pessoa3
+}
+
+print(dictPessoas['pessoa2'].nome)
