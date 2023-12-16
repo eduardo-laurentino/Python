@@ -463,4 +463,4 @@ def pesquisaBinaria():
 #cotacaoMoedas()
 #enviaZap()
 #PesquisaSequencial()
-pesquisaBinaria()
+#pesquisaBinaria()
